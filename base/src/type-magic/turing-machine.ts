@@ -129,7 +129,7 @@ type Start = { left: "B"; current: "a"; right: "aabbbB" };
 
 // RESULTS
 type Result = Q0<Start>;
-// type Result = "111111"
+// type Result = "BXXXYYYB"
 
 type SplitKeyValue<T extends string> = T extends `${infer U} = ${infer V}`
   ? { key: U; value: V }
