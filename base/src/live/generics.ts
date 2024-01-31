@@ -46,7 +46,7 @@ type WhereType<T> = <U extends string>(
 interface QueryBuilder<T extends Query = {}> {
   where: WhereType<T>;
   execute: (
-    cb: (value: TypeOfQueryBuilder<QueryBuilder<T>>) => any
+    cb: (value: T) => any
   ) => QueryBuilder<T>;
 }
 
